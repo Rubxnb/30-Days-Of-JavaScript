@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./images/uranus.png">
 </head>
 
 <body class="body">
@@ -15,7 +16,7 @@
             <h1>Calculate a weight of an object on a planet</h1>
             <div class="header">
                 <input type="text" id="mass" placeholder="Mass in Kilogram" />
-                <select class="select">
+                <select class="select" id="select">
                     <option value='none'>--select planet-- </option>
                 </select>
                 <button>Calculate weight</button>
@@ -28,7 +29,7 @@
     <main>
         <div class="flex-container">
             <div class="flex-item image">
-                <img src='./images/earth.png' class="planet-image" />
+                <img id="planet-image" src='./images/earth.png' class="planet-image" />
             </div>
             <div class="flex-item description"> 
                 <p>La masa de la tierra es </p>
