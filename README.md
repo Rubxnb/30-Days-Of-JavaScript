@@ -3,4 +3,4 @@
 Learning the basics of JavaScript.  
 Practicing with mini projects
 
-* Solar System Project
+* Solar System Project 
