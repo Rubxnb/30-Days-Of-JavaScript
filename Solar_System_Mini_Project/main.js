@@ -57,7 +57,7 @@ button.addEventListener('click', e => {
         
     } 
     if(mass.value !== '' && planetSelected !=='none') {
-        const div = createDescription(`The weight of the object on ${planetSelected}`, true)
+        const div = createDescription(`The weight of the object on ${planetSelected.toUpperCase()}`, true)
         flexContainer.appendChild(div)
     }
     
