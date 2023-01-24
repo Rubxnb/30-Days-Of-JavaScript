@@ -1,4 +1,4 @@
-const countries_data = [
+const COUNTRIES_DATA = [
 	{
 			"name": "Afghanistan",
 			"capital": "Kabul",
@@ -2736,7 +2736,7 @@ const countries_data = [
 			"area": 242900
 	},
 	{
-			"name": "United States of America",
+			"name": "USA",
 			"capital": "Washington, D.C.",
 			"languages": [
 					"English"

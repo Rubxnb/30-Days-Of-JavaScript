@@ -1,0 +1,108 @@
+body {
+    font-family: "Montserrat";
+    background-color: rgb(240,241,242); 
+}
+
+h2 {
+    font-size: 40px;
+    color: rgb(255, 165, 0);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.subtitle{
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+button {
+    background-color:rgb(255, 165, 0);
+    border: none;
+    padding: 10px;
+    font-family: 'Montserrat';
+    border-radius: 5%;
+}
+button:hover {
+    background-color:rgb(255, 165, 0);
+    border: none;
+    padding: 10px;
+    font-family: 'Montserrat';
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(255,255,255);
+    box-shadow: inset 0px 4px 6px -6px black;
+}
+.graph-buttons{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.graph-title {
+    margin: 10px;
+}
+
+.graphs {
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(240,241,242); 
+    box-shadow: inset 0px 4px 6px -6px black;
+}
+
+.graph-wrapper {
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.language {
+    justify-self: left;
+    margin-left: 50%;
+}
+
+.value {
+    justify-self: left;
+    margin-left: 10%;
+}
+
+.bar {
+    background-color: rgb(255, 165, 0);
+    height: 40px;
+    justify-self: left;
+}
