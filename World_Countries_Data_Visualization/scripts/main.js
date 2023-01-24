@@ -1,12 +1,21 @@
 const graphs = document.querySelector('.graphs')
 const graphTitle = document.querySelector('.graph-title')
+const subtitle = document.querySelector('.subtitle')
+
+subtitle.appendChild(document.createTextNode(`Currently, we have ${COUNTRIES_DATA.length} countries`))
 
 const populationButton = document.querySelector('.population')
 populationButton.addEventListener('click', () => {
     population()})
 
+const languagesButton = document.querySelector('.languages')
+languagesButton.addEventListener('click', () => {
+    languages()})
+
 function population() {
     removeChilds(graphs)
+    removeChilds(graphTitle)
+    graphTitle.appendChild(document.createTextNode('10 Most populated countries in the world'))
     let total = 0
 
     COUNTRIES_DATA.forEach((e) => {
@@ -19,14 +28,37 @@ function population() {
         return 0
     })
 
-    createGraphWrapperPopulation('World', total, total)
+    createGraphWrapper('World', total, total)
     for(var i = 0; i < 9; i++) {
-        createGraphWrapperPopulation(COUNTRIES_DATA[i].name, total, COUNTRIES_DATA[i].population)
-    }
-    
+        createGraphWrapper(COUNTRIES_DATA[i].name, total, COUNTRIES_DATA[i].population)
+    } 
 }
 
-function createGraphWrapperPopulation(country, total, value){
+function languages() {
+    removeChilds(graphs)
+    removeChilds(graphTitle)
+    graphTitle.appendChild(document.createTextNode('10 most spoken languages in the world'))
+
+    let languages = new Map()
+
+    COUNTRIES_DATA.forEach((c) => {
+        c.languages.forEach((l) => {
+            if(languages.has(l)) {
+                languages.set(l, languages.get(l) + 1)
+            } else {
+                languages.set(l, 1)
+            }
+        })
+    })
+    languages = new Map([...languages.entries()].sort((a, b) => b[1] - a[1]));
+    const keys = languages.entries()
+    for(let i = 0; i<10; i++) {
+        const language = keys.next().value
+        createGraphWrapper(language[0], 100, languages.get(language[0]))
+    }
+}
+
+function createGraphWrapper(country, total, value){
     // div graph-wrapper
     let graphWrapper = document.createElement('div')
     graphWrapper.className = 'graph-wrapper'
