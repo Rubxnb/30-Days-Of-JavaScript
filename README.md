@@ -5,3 +5,4 @@ Practicing with mini projects
 
 * Solar System Project 
 * World Countries Data Visualization
+* World Countries Data Visualization 2
