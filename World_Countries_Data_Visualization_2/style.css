@@ -57,7 +57,7 @@ button {
     font-weight: normal;
 }
 
-button:active {
+button:active, .active {
     background-color: rgb(86, 28, 182);
 }
 
@@ -73,7 +73,8 @@ button:hover {
 }
 
 .lupa {
-    width: 40px;
+    margin-left: 5px;
+    width: 30px;
 }
 
 .sort > img{
@@ -94,4 +95,43 @@ input {
 
 input:focus {
     outline: none;
+}
+
+.main {
+    margin: 90px;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.card {
+    display: flex;
+    background-image: url("./images/map_image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+
+.card-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(20, 5, 54, 0.534);
+    height: 200px;
+    width: 200px;
+    border-radius: 2%;
+}
+
+.country {
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
